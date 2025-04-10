@@ -1,0 +1,254 @@
+1. What is the fundamental difference between procedural and object-oriented programming paradigms? Provide a brief example to illustrate.
+Answer:
+Procedural programming is based on functions and procedures that operate on data, while object-oriented programming (OOP) structures the program around objects which encapsulate data and behavior.
+
+Example (Procedural):
+cpp
+Copy
+Edit
+int speed;
+void setSpeed(int s) { speed = s; }
+int getSpeed() { return speed; }
+Example (OOP):
+cpp
+Copy
+Edit
+class Car {
+   private:
+     int speed;
+   public:
+     void setSpeed(int s) { speed = s; }
+     int getSpeed() { return speed; }
+};
+
+2. Define Object-Oriented Programming (OOP). What are its core characteristics?
+Answer:
+OOP is a programming paradigm centered around objects that represent data and the operations that can be performed on them. Core characteristics:
+
+Encapsulation
+
+Abstraction
+
+Inheritance
+
+Polymorphism
+
+3. Explain the concept of "abstraction" within the context of OOP. Why is it important?
+Answer:
+Abstraction is the process of hiding complex implementation details and showing only the essential features of an object. It's important because it reduces complexity and increases code readability and maintainability.
+
+4. What are the benefits of using OOP over procedural programming?
+Answer:
+
+Code reusability through inheritance
+
+Better data organization via encapsulation
+
+Easier maintenance and scalability
+
+Supports real-world modeling
+
+5. Give a real-world example of a problem that is well-suited to be solved using an OOP approach. Explain why.
+Answer:
+Example: Building a simulation for a zoo management system.
+Why OOP: Animals, staff, and visitors can each be modeled as classes with properties and behaviors. This makes it modular, extensible, and easier to manage.
+
+6. Define the four key principles of OOP: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+Answer:
+
+Encapsulation: Wrapping data and methods into a single unit (class).
+
+Inheritance: Creating new classes from existing ones.
+
+Polymorphism: Using a single interface to represent different data types.
+
+Abstraction: Hiding internal details and showing essential features.
+
+7. Explain how encapsulation helps to protect data and create modular code. Give an example using a class and its members.
+Answer:
+Encapsulation restricts access to internal data using access specifiers, making code more secure and modular.
+
+Example:
+
+cpp
+Copy
+Edit
+class BankAccount {
+   private:
+     double balance;
+   public:
+     void deposit(double amount) { balance += amount; }
+     double getBalance() { return balance; }
+};
+8. What is inheritance? How does it promote code reuse and maintainability? Provide a simple example using classes.
+Answer:
+Inheritance allows a class to inherit properties and behaviors from another class, reducing redundancy.
+
+Example:
+
+cpp
+Copy
+Edit
+class Animal {
+   public:
+     void eat() { cout << "Eating..."; }
+};
+
+class Dog : public Animal {
+   public:
+     void bark() { cout << "Barking..."; }
+};
+9. Describe polymorphism. How does it contribute to flexibility and extensibility in software design? Give examples of function/operator overloading and function overriding.
+Answer:
+Polymorphism allows objects to be treated as instances of their parent class, increasing flexibility.
+
+Function Overloading:
+
+cpp
+Copy
+Edit
+int add(int a, int b);
+float add(float a, float b);
+Function Overriding:
+
+cpp
+Copy
+Edit
+class Base {
+   public:
+     virtual void show() { cout << "Base class"; }
+};
+
+class Derived : public Base {
+   public:
+     void show() override { cout << "Derived class"; }
+};
+10. Explain the difference between "overloading" and "overriding".
+Answer:
+
+Overloading: Same function name, different parameters (compile-time).
+
+Overriding: Redefining a base class method in a derived class (runtime).
+
+11. List at least three advantages of using OOP in software development.
+Answer:
+
+Improved code reusability
+
+Easier troubleshooting and debugging
+
+Better alignment with real-world modeling
+
+12. Give examples of application domains where OOP is commonly used (e.g., GUI development, game programming, etc.).
+Answer:
+
+GUI development
+
+Game programming
+
+Web applications
+
+Simulation systems
+
+Enterprise software (e.g., CRM, ERP)
+
+13. Discuss the impact of OOP on code maintainability and reusability.
+Answer:
+OOP promotes maintainability by organizing code into logical classes and supports reusability through inheritance and modularity, reducing redundancy.
+
+14. How does OOP contribute to the development of large and complex software systems?
+Answer:
+OOP simplifies complexity by breaking down systems into objects. This modular structure makes it easier to manage, update, and scale large applications.
+
+15. Explain the benefits of using OOP in software development.
+Answer:
+
+Encapsulation increases security
+
+Inheritance reduces code duplication
+
+Polymorphism allows flexibility
+
+Abstraction simplifies system design
+
+16. Describe the basic structure of a C++ program. What are the essential components?
+Answer:
+
+Preprocessor directives (#include)
+
+Namespace declaration
+
+main() function
+
+Classes and objects
+
+Statements and expressions
+
+Example:
+
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, world!";
+    return 0;
+}
+17. Explain the purpose of namespaces in C++. How do they help to avoid naming conflicts?
+Answer:
+Namespaces allow the organization of code into logical groups and prevent name collisions, especially in large projects or when using multiple libraries.
+
+Example:
+
+cpp
+Copy
+Edit
+namespace Math {
+    int add(int a, int b) { return a + b; }
+}
+18. What are identifiers in C++? What rules must be followed when creating them?
+Answer:
+Identifiers are names used for variables, functions, classes, etc. Rules:
+
+Must begin with a letter or underscore
+
+Cannot use reserved keywords
+
+Case-sensitive
+
+Cannot contain spaces or special characters (except _)
+
+19. What are the differences between variables and constants in C++? How are they declared?
+Answer:
+Variables: Values can change
+cpp
+Copy
+Edit
+int age = 25;
+Constants: Values cannot change
+cpp
+Copy
+Edit
+const int MAX_AGE = 100;
+
+20. Explain how to use control structures (e.g., if-else, for, while) to control the flow of execution in a C++ program. Provide a simple code example.
+Answer: Control structures allow conditional execution and loops.
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i;
+    for(i = 1; i <= 5; i++) {
+        if(i % 2 == 0)
+            cout << i << " is even\n";
+        else
+            cout << i << " is odd\n";
+    }
+    return 0;
+}
